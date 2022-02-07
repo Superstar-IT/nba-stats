@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="./assets/favicon-32x32.png" />
+
+    <!-- Font awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <!-- Internal stylesheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>NBA Code Stars</title>
+  </head>
+  <body>
+    <!-- Skip link -->
+    <a href="#nbaMain" class="skipLink">Skip to main content</a>
+
+    <!-- Loading spinner -->
+    <div id="loader" class="loadingContainer">
+      <i class="fas fa-basketball-ball"></i>
+    </div>
+
+    <!-- Wrapper to achieve full screen view -->
+    <div class="fullscreen">
+      <!-- Header -->
+      <header class="wrapper">
+        <nav>
+          <!-- Logo container -->
+          <div class="logoContainer">
+            <img
+              class="logo"
+              src="./assets/nba-logo.png"
+              alt="nba code stars logo"
+            />
+          </div>
+        </nav>
+
+        <!-- Website name -->
+        <h1>NBA Code Stars</h1>
+
+        <!-- Teams dropdown container -->
+        <div class="dropdownContainer">
+          <h2 class="dropdownLabel">Select your favourite teams</h2>
+
+          <!-- Custom dropdown -->
+          <!-- Dropdown accessibility resource used: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role -->
+          <ul
+            class="dropdown"
+            role="listbox"
+            aria-multiselectable="true"
+            aria-activedescendant="all"
+          >
+            <li
+              class="dropdownOption optionOne highlight"
+              role="option"
+              tabindex="0"
+              value="all"
+              id="all"
+              aria-selected="true"
+            >
+              <span>All teams</span>
+              <i class="fas fa-caret-down dropdownIcon"></i>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main id="nbaMain" class="wrapper" aria-live="polite" aria-busy="false">
+        <!-- Team cards section -->
+        <section class="teamCardsSection">
+          <!-- Team cards container -->
+          <ul class="teamCards"></ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p class="footerText">Created at Juno College 2021</p>
+    </footer>
+
+    <!-- JS scripts -->
+    <script type="module" src="./script/script.js"></script>
+  </body>
+</html>
